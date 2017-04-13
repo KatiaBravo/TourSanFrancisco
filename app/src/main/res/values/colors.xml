@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="beach">#80DEEA</color>
+    <color name="food">#00B8D4</color>
+    <color name="museum">#01579B</color>
+    <color name="history">#0D47A1</color>
+    <color name="mainBackground">#1A237E</color>
+</resources>
