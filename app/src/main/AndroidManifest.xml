@@ -17,8 +17,8 @@
         </activity>
         <activity android:name=".Beaches"
             android:label="Beaches" />
-        <activity android:name=".FoodRelated"
-            android:label="Food Related" />
+        <activity android:name=".Food"
+            android:label="Food" />
         <activity android:name=".Museums"
             android:label="Museums" />
         <activity android:name=".HistoricalSites"

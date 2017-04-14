@@ -14,8 +14,8 @@ public class Beaches extends AppCompatActivity {
         setContentView(R.layout.main_feature);
 
         final ArrayList<Feature> features = new ArrayList<Feature>();
-        features.add(new Feature("Ocean Beach", R.drawable.oceanbeach, R.string.OceanBeach));
-        features.add(new Feature("Baker Beach", R.drawable.bakerbeach, R.string.BakerBeach));
+        features.add(new Feature(R.string.OBTitle, R.drawable.oceanbeach, R.string.OceanBeach));
+        features.add(new Feature(R.string.BBTitle, R.drawable.bakerbeach, R.string.BakerBeach));
 
         FeatureAdapter adapter = new FeatureAdapter(this, features, R.color.beach);
         ListView listView = (ListView) findViewById(R.id.feature);

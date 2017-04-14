@@ -28,26 +28,25 @@ public class FeatureAdapter extends ArrayAdapter<Feature> {
     @Override
     public View getView ( int position, View convertView, ViewGroup parent){
         // Check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.feature_view, parent, false);
         }
 
         final Feature currentFeature = getItem(position);
-        TextView activityName = (TextView) listItemView.findViewById(R.id.activity_name_and_times);
+        TextView activityName = (TextView) convertView.findViewById(R.id.activity_name_and_times);
         activityName.setText(currentFeature.getmName());
-        TextView description = (TextView) listItemView.findViewById(R.id.description);
+        TextView description = (TextView) convertView.findViewById(R.id.description);
         description.setText(currentFeature.getmDescription());
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.activity_image);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.activity_image);
         if (currentFeature.hasImage()){
             imageView.setImageResource(currentFeature.getmImageResourceId());
             imageView.setVisibility(View.VISIBLE);
         } else {
             imageView.setVisibility(View.GONE);}
-        View textContainer = listItemView.findViewById(R.id.text_container);
+        View textContainer = convertView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
-        return listItemView;
+        return convertView;
     }
 }

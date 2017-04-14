@@ -6,23 +6,23 @@ package com.katiabravo.tour_sanfrancisco;
 
 public class Feature {
 
-    private String mName;
+    private int mName;
     private int mImageResourceId;
     private static final int NO_IMAGE_PROVIDED = -1;
     private int mDescription;
 
-    public Feature(String name, int imageResourceId, int description){
+    public Feature(int name, int imageResourceId, int description){
         mName = name;
         mImageResourceId = imageResourceId;
         mDescription = description;
     }
 
-    public Feature(String name, int description){
+    public Feature(int name, int description){
         mName = name;
         mDescription = description;
     }
 
-    public String getmName(){ return mName;}
+    public int getmName(){ return mName;}
     public int getmImageResourceId(){ return mImageResourceId;}
     public boolean hasImage() { return mImageResourceId != NO_IMAGE_PROVIDED;}
     public int getmDescription(){ return mDescription;}

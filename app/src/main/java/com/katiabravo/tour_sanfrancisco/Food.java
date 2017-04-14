@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class FoodRelated extends AppCompatActivity {
+public class Food extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,11 +14,11 @@ public class FoodRelated extends AppCompatActivity {
         setContentView(R.layout.main_feature);
 
         final ArrayList<Feature> features = new ArrayList<Feature>();
-        features.add(new Feature("Ghirardelli Squre", R.drawable.gsquare, R.string.GhirardelliSquare));
-        features.add(new Feature("Pier 39", R.drawable.pier39, R.string.Pier39));
-        features.add(new Feature("Al's Place", R.string.AlsPlace));
-        features.add(new Feature("La Taqueria", R.string.LaTaqueria));
-        features.add(new Feature("Flour + Water", R.string.FAndW));
+        features.add(new Feature(R.string.GSTitle, R.drawable.gsquare, R.string.GhirardelliSquare));
+        features.add(new Feature(R.string.P39Title, R.string.Pier39));
+        features.add(new Feature(R.string.APTitle, R.string.AlsPlace));
+        features.add(new Feature(R.string.LTTitle, R.string.LaTaqueria));
+        features.add(new Feature(R.string.FWTitle, R.string.FAndW));
 
         FeatureAdapter adapter = new FeatureAdapter(this, features, R.color.food);
         ListView listView = (ListView) findViewById(R.id.feature);
